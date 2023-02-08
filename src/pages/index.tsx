@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Today's Headlines</title>
+        <title>News Headlines</title>
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </Head>
       <main>
