@@ -23,11 +23,9 @@ const Home = ({data}: NewsArticles) => {
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </Head>
       <main>
-        <ul>
           {data.articles.map((article, index) => {
             return <NewsArticle article={article} key={index} />
           })}
-        </ul>
       </main>
     </>
   )
