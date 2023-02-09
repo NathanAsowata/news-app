@@ -14,21 +14,14 @@ interface NewsArticle {
 const NewsArticle = ({article}:NewsArticle) => {
   return (
     
-    <Link href={article.url} target={"_blank"}>
-       
-        <div className={styles.newsCard}>
-            
-            <img src={article.urlToImage} alt={article.title} className={styles.image} />
-            
-            <h3>{article.title}</h3>
-            
-            <h5>by {article.author}</h5>
-            
+    <div className={styles.newsCard}>           
+        <Link href={article.url} target={"_blank"}>     
+            <img src={article.urlToImage} alt={article.title} className={styles.image} />           
+            <h3>{article.title}</h3>          
             <p>{article.description}</p>
-        
-        </div>
+        </Link>
+    </div>
     
-    </Link>
   )
 }
 

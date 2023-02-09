@@ -1,6 +1,7 @@
 import NewsArticle from "@/components/NewsArticle"
 import axios from "axios"
 import Head from "next/head"
+import styles from "../styles/Home.module.scss"
 
 
 interface NewsArticles {
@@ -22,7 +23,8 @@ const Home = ({data}: NewsArticles) => {
         <title>News Headlines</title>
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </Head>
-      <main>
+      
+      <main className={styles.main}>
           {data.articles.map((article, index) => {
             return <NewsArticle article={article} key={index} />
           })}
