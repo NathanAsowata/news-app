@@ -7,16 +7,16 @@ import styles from "../styles/Home.module.scss"
 interface NewsArticles {
   data: {  
     articles: {
-        author: string,
         title: string,
-        description: string
         url: string,
-        urlToImage: string
+        urlToImage: string,
+        publishedAt: string
       }[]
   }
 }
 
 const Home = ({data}: NewsArticles) => {
+
   return (
     <>
       <Head>

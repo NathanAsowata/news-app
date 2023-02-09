@@ -1,24 +1,38 @@
 import Link from "next/link"
+import { useState } from "react"
 import styles from "../styles/NewsArticle.module.scss"
+import TimeStamp from "./TimeStamp"
 
 interface NewsArticle {
     article:{   
-        author: string,
         title: string,
-        description: string
         url: string,
         urlToImage: string,
+        publishedAt: string
     }
 }
 
 const NewsArticle = ({article}:NewsArticle) => {
-  return (
-    
+  
+  const [timePublished, setTimePublished] = useState("")
+
+  // Check if there is an image for the news article
+  let imageLink;
+  // If there is no image return a placeholder
+  if (article.urlToImage === null){
+      imageLink = "placeholder.png"
+  }
+  // Else if there is an image return it instead
+  else{
+    imageLink = article.urlToImage
+  }
+
+  return ( 
     <div className={styles.newsCard}>           
         <Link href={article.url} target={"_blank"}>     
-            <img src={article.urlToImage} alt={article.title} className={styles.image} />           
-            <h3>{article.title}</h3>          
-            <p>{article.description}</p>
+            <img src={imageLink} alt={article.title} className={styles.image} />           
+            <p className={styles.title}>{article.title}</p>
+            <TimeStamp timestamp={article.publishedAt} />
         </Link>
     </div>
     

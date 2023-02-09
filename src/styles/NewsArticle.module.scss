@@ -1,10 +1,15 @@
 .newsCard{
-    width: 280px;
+    width: 250px;
+    height: auto;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 4px 4px 6px gray;
 }
 .image{
-    width: 280px;
+    width: 250px;
+    max-height: 150px;
     border-radius: 10px 10px 0px 0px;
+}
+.title{
+    margin: 10px;
 }
