@@ -13,8 +13,6 @@ interface NewsArticle {
 }
 
 const NewsArticle = ({article}:NewsArticle) => {
-  
-  const [timePublished, setTimePublished] = useState("")
 
   // Check if there is an image for the news article
   let imageLink;
@@ -22,18 +20,24 @@ const NewsArticle = ({article}:NewsArticle) => {
   if (article.urlToImage === null){
       imageLink = "placeholder.png"
   }
-  // Else if there is an image return it instead
+  // Else if the image if it exists
   else{
     imageLink = article.urlToImage
   }
 
   return ( 
     <div className={styles.newsCard}>           
+        
         <Link href={article.url} target={"_blank"}>     
+            
             <img src={imageLink} alt={article.title} className={styles.image} />           
+            
             <p className={styles.title}>{article.title}</p>
+            
             <TimeStamp timestamp={article.publishedAt} />
+        
         </Link>
+    
     </div>
     
   )
