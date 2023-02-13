@@ -1,5 +1,6 @@
 import MobileNavBar from "@/components/MobileNavBar"
 import NewsArticle from "@/components/NewsArticle"
+import SideBar from "@/components/SideBar"
 import axios from "axios"
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
@@ -24,7 +25,7 @@ const Home = ({data}: NewsArticles) => {
         <title>News Headlines</title>
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </Head>
-      <MobileNavBar />
+      <SideBar />
       
       <main className={styles.main}>
           {data.articles.map((article, index) => {
