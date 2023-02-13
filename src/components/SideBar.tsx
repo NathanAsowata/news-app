@@ -1,21 +1,20 @@
 import Link from 'next/link'
-import React from 'react'
+import styles from "../styles/SideBar.module.scss"
 
 const SideBar = () => {
   return (
-    <nav>
-        <section>
+    <nav className={styles.sidebar}>
+        <section className={styles.logo}>
             <h1>NewsHive</h1>
         </section>
-        <section>
+        <section className={styles.categories}>
             <h3>Countries</h3>
             <Link href={"/#"}>Nigeria</Link><br />
             <Link href={"/#"}>United States</Link><br />
             <Link href={"/#"}>Great Britain</Link><br />
             <Link href={"/#"}>Ireland</Link><br />
             <Link href={"/#"}>Canada</Link><br />
-        </section>
-        <section>
+
             <h3>Interests</h3>
             <Link href={"/#"}>Sports</Link><br />
             <Link href={"/#"}>Business</Link><br />
