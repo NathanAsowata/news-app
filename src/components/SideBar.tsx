@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from "../styles/SideBar.module.scss"
-import { useState } from "react"
 
 const SideBar = () => {
 
@@ -14,18 +13,18 @@ const SideBar = () => {
         </section>
         <section className={styles.categories}>
             <h3>Countries</h3>
-            <Link href={"/#"}>Nigeria</Link><br />
-            <Link href={"/#"}>United States</Link><br />
-            <Link href={"/#"}>Great Britain</Link><br />
-            <Link href={"/#"}>Ireland</Link><br />
-            <Link href={"/#"}>Canada</Link><br />
+            <Link href={"/country/ng"}>Nigeria</Link><br />
+            <Link href={"/country/us"}>United States</Link><br />
+            <Link href={"/country/gb"}>United Kingdom</Link><br />
+            <Link href={"/country/ie"}>Ireland</Link><br />
+            <Link href={"/country/ca"}>Canada</Link><br />
 
             <h3>Interests</h3>
-            <Link href={"/#"}>Sports</Link><br />
-            <Link href={"/#"}>Business</Link><br />
-            <Link href={"/#"}>Health</Link><br />
-            <Link href={"/#"}>Technology</Link><br />
-            <Link href={"/#"}>Entertainment</Link>
+            <Link href={"/interest/sport"}>Sports</Link><br />
+            <Link href={"/interest/business"}>Business</Link><br />
+            <Link href={"/interest/health"}>Health</Link><br />
+            <Link href={"/interest/technology"}>Technology</Link><br />
+            <Link href={"/interest/entertainment"}>Entertainment</Link>
         </section>
     </nav>
   )

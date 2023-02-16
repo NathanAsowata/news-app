@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation"
 import NewsCard from "@/components/NewsCard"
 import axios from "axios"
 import Head from "next/head"
-import styles from "../styles/Home.module.scss"
+import styles from "../../styles/Home.module.scss"
 
 
 interface NewsArticles {
@@ -16,7 +16,7 @@ interface NewsArticles {
   }
 }
 
-const Home = ({data}: NewsArticles) => {
+const Category = ({data}: NewsArticles) => {
 
   return (
     <>
@@ -39,16 +39,30 @@ const Home = ({data}: NewsArticles) => {
   )
 }
 
-export default Home
+export default Category
 
 
-export async function getServerSideProps () {
+export const getServerSideProps = async (context:any) => {
+
+  const newsCategory = context.params.category
+  const categoryName = context.params.name
   
-  const posts = await axios.get(`https://newsapi.org/v2/top-headlines?language=en&apiKey=${process.env.API_KEY}`)
-  
-  return{
-    props: {
-      data: posts.data
+  if (newsCategory === "country") {
+    const posts = await axios.get(`https://newsapi.org/v2/top-headlines?country=${categoryName}&language=en&apiKey=${process.env.API_KEY}`)
+    return {
+      props: {
+        data: posts.data
+      }
     }
   }
+  
+  if (newsCategory === "interest") {
+    const posts = await axios.get(`https://newsapi.org/v2/top-headlines?category=${categoryName}&language=en&apiKey=${process.env.API_KEY}`)
+    return {
+      props: {
+        data: posts.data
+      }
+    }
+  }
+  
 }

@@ -1,5 +1,17 @@
 .main{
-    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+.main:nth-child(1){
+    background-color: #1C001C;
+}
+@media screen and (min-width: 700px) {
+    .main{
+        flex-direction: row;
+    }
+}
+.content{
+    padding-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
