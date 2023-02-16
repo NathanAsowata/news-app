@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import styles from "../styles/SideBar.module.scss"
+import { useState } from "react"
 
 const SideBar = () => {
+
+
+
+
   return (
     <nav className={styles.sidebar}>
         <section className={styles.logo}>

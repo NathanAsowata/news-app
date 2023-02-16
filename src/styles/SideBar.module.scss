@@ -35,3 +35,17 @@
         border-radius: 0px 50px 50px 0px;
     }
 }
+
+// For mobile devices
+@media screen and (max-width: 700px) {
+    .sidebar, .logo{
+        width: 250px;
+    }
+    .categories{
+        padding-top: 10px;
+        a{
+            width: 160px;
+        }
+    }
+
+}

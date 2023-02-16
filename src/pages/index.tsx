@@ -1,6 +1,6 @@
 import MobileNavBar from "@/components/MobileNavBar"
 import Navigation from "@/components/Navigation"
-import NewsArticle from "@/components/NewsArticle"
+import NewsArticle from "@/components/NewsCard"
 import SideBar from "@/components/SideBar"
 import axios from "axios"
 import Head from "next/head"
