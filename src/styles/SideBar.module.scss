@@ -1,0 +1,51 @@
+.sidebar{
+    width: 300px;
+    min-height: 100vh;
+    background-color: #1C001C;
+    padding: 10px 40px;
+    color: white;
+}
+.logo{
+    background-color: #310031;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 300px;
+    padding: 10px 40px;
+    border-bottom: 2px solid #710071;
+    h1{
+        font-family: 'Abril Fatface', cursive;
+        font-weight: 300;
+        font-size: 28px;
+    }
+}
+.categories{
+    padding-top: 75px;
+    h3{
+        padding-top: 25px;
+        font-weight: 600;
+    }
+    a{
+        display: inline-block;
+        padding: 7px 10px;
+        width: 220px;
+    }
+    a:hover{
+        background-color: #710071;
+        border-radius: 0px 50px 50px 0px;
+    }
+}
+
+// For mobile devices
+@media screen and (max-width: 700px) {
+    .sidebar, .logo{
+        width: 250px;
+    }
+    .categories{
+        padding-top: 10px;
+        a{
+            width: 160px;
+        }
+    }
+
+}

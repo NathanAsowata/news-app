@@ -1,4 +1,7 @@
-import NewsArticle from "@/components/NewsArticle"
+import MobileNavBar from "@/components/MobileNavBar"
+import Navigation from "@/components/Navigation"
+import NewsArticle from "@/components/NewsCard"
+import SideBar from "@/components/SideBar"
 import axios from "axios"
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
@@ -20,9 +23,12 @@ const Home = ({data}: NewsArticles) => {
   return (
     <>
       <Head>
-        <title>News Headlines</title>
+        <title>NewsHive</title>
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </Head>
+
+      {/* This component renders the appropriate navigation menu for mobile and desktop screen sizes */}
+      <Navigation />
       
       <main className={styles.main}>
           {data.articles.map((article, index) => {

@@ -1,5 +1,5 @@
 import { screen, render } from "@testing-library/react"
-import NewsArticle from "@/components/NewsArticle";
+import NewsArticle from "@/components/NewsCard";
 
 const sampleNews ={   
     title: "A mock title",

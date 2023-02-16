@@ -1,0 +1,19 @@
+// On a small scren display the mobile navBar
+@media screen and (max-width: 700px) {
+    .mobileView{
+        display: block;
+    }
+    .desktopView{
+        display: none;
+    }
+}
+
+// On a large screen display the sidebar
+@media screen and (min-width: 701px) {
+    .mobileView{
+        display: none;
+    }
+    .desktopView{
+        display: block;
+    }
+}
