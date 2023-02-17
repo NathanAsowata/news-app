@@ -9,7 +9,9 @@ const SideBar = () => {
   return (
     <nav className={styles.sidebar}>
         <section className={styles.logo}>
-            <h1>NewsHive</h1>
+            <Link href={"/"}>
+              <h1>NewsHive</h1>
+            </Link>
         </section>
         <section className={styles.categories}>
             <h3>Countries</h3>
